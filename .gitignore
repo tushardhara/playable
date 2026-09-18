@@ -1,0 +1,9 @@
+# Public repo. Deny by default: nothing is tracked unless explicitly allowed below.
+# Everything else in this working tree is private — specs, founder docs, pricing,
+# run transcripts, tooling. Do not relax this file without checking what it exposes.
+
+/*
+!/.gitignore
+!/v0/
+/v0/*
+!/v0/1-FORGE.md

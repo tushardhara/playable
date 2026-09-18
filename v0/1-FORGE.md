@@ -1,4 +1,4 @@
-# FILE 1 — THE FORGE, revision 4
+# FILE 1 — THE FORGE, revision 5
 
 ## Task and output
 
@@ -8,7 +8,7 @@ Override tokens: BRAKE <replacement>, FAMILY <name>, HARDER <rung>. Rebuild affe
 
 ## Derive the world
 
-Find the wound and hidden advantage in the premise. Derive a brake from an existing noun, never a dependent's threatened welfare. It must make spending the advantage cost something concrete, survive another character's goodwill, and hurt on screen. Give it an event fuse with six occurrences and an explicit early-break price. A fuse event is an action someone can stage, not a chapter counter or calendar deadline. Do not assert that event fuses guarantee valid chronology.
+Find the wound and hidden advantage in the premise. Derive a brake from an existing noun, never a dependent's threatened welfare. It must make spending the advantage cost something concrete, survive another character's goodwill, and hurt on screen. Give it an event fuse with six qualifying occurrences, six offered opportunities, and an explicit early-break price. Author BOTH a six-entry ending and a consequential incomplete-count ending after the sixth opportunity closes. The six-entry condition remains strict: an incomplete path cannot receive its reward. Each opportunity must be reachable through concrete player choices to accept, accelerate, defer, or refuse; closure and completion are distinct events. Close the final opportunity and stage the ending at turn 66, never stop testing at 33. A fuse event is an action someone can stage, not a chapter counter or calendar deadline. Do not assert that event fuses guarantee valid chronology.
 
 Choose REVERSAL (withhold an advantage), CLAIM (comply in form while withholding substance), or BARGAIN (invoke a binding clause). State the ending move and what actually happens if attempted early. The protagonist may attempt it; author a consequential result rather than declaring it impossible.
 
@@ -40,15 +40,15 @@ Include a section headed "Time anchors" containing all historical events that ca
 - E1 = -217 | the transfer
 - E2 = -42 | the death
 
-Those are format examples, not this world's facts. IDs identify events, not reusable quantities. All offsets are integer days relative to turn 1 = 0. No unanchored historical durations. Prefer exact days or whole weeks; omit years/months as elapsed units. Fixed character ages may stay. Validate any pairwise interval with subtraction. Future appointments are created in TIME during play, not in a second competing calendar.
+Those are format examples, not this world's facts. IDs identify events, not reusable quantities. All offsets are integer days relative to turn 1 = 0. No unanchored historical durations. Prefer exact days or whole weeks; omit years/months as elapsed units. Fixed character ages may stay. Validate any pairwise interval with subtraction. Appointments enter TIME during play from the authored initial appointment or an on-screen event, not a second competing calendar.
 
-The opening stays wholly in R1's arena. Put its authority in action and its advantage physically nearby. Supply three executable choices and BOUND: no offstage travel, future-rung inventory, or unavailable object disguised as an opening option. Match the opening register to the runtime's past tense.
+The opening stays wholly in R1's arena. Put its authority in action and its advantage physically nearby. Supply three executable choices, but NO BOUND in the shared world. The full runtime creates BOUND at play time; the ablated runtime does not. Author one initial appointment ID and relative due day if an opening choice changes its date: no offstage travel, future-rung inventory, or unavailable object disguised as an opening option. Match the opening register to the runtime's past tense.
 
 ## World Card and emission
 
 The World Card contains title/logline, premise, brake and fuse, register/family, cast, secrets, anchors, all ladder contracts, and an opening. Preserve those facts and ladder triples verbatim when emitting FILE 2; do not quietly shorten a stake or change an arena. End the card with the override list and "Anything else emits FILE 2". Report derivation checks as calculations and concrete examples, never PASS or a self-awarded verdict.
 
-World section: 900–1,100 whitespace-separated words, including headings, ladder contracts, and opening choices. Runtime: copy the template below verbatim. Total FILE 2: maximum 3,500 words. If the budget cannot fit, shorten world exposition, never silently drop a runtime rule or closure. These are experimental budgets, not a proven cognitive limit.
+World section: 900–1,100 whitespace-separated words, including headings, ladder contracts, and opening choices. Runtime: copy the template below verbatim. Total FILE 2: maximum 3,500 words; aim near 2,400 with the smaller runtime. Publish actual prose/choice metering at this size before claiming it works. If the budget cannot fit, shorten world exposition, never silently drop a runtime rule or closure. These are experimental budgets, not a proven cognitive limit.
 
 Emission is one message:
 ===== BEGIN FILE 2 - COPY EVERYTHING BELOW THIS LINE =====
@@ -56,70 +56,70 @@ Emission is one message:
 [The complete runtime template below]
 ===== END FILE 2 - COPY EVERYTHING ABOVE THIS LINE =====
 
-No triple-backtick fences or outside references in emitted FILE 2. No greeting or text outside the sentinels. The first world instruction says "Run this story one turn per message; the first output is turn 1." The square-bracket instructions above are replaced, not emitted.
+The verified runtime requires a host to retain immutable ledger deltas and compute digests; the model only copies them. A chat without that host is an unverified play mode. No triple-backtick fences or outside references in emitted FILE 2. No greeting or text outside the sentinels. The first world instruction says "Run this story one turn per message; the first output is turn 1." The square-bracket instructions above are replaced, not emitted.
 
 ## Runtime template — copy verbatim into FILE 2
 
 ## How a turn works
 
-Run one turn per message: five state lines, scene, three choices, BOUND, stop. The first message is turn 1. The state is an audit record, not evidence that the scene complied. Never grade yourself. World facts and these rules are the complete input.
+One turn per message: five state lines, scene, three choices, BOUND, stop. First output is turn 1. State records claims for independent checking; it never proves the prose complied. Never grade yourself.
 
-Resolve conflicts in this order: canon and settled rights; the player's actual commitment; current location and time; chapter scheduling; style. A schedule never authorises an unchosen act. If an obligation cannot be met, record `unmet: <obligation>` in CHECK and play the valid consequence; never invent compliance.
+Priority: canon and settled rights; the player's commitment; location/time; chapter scheduling; style. Schedule cannot author consent. Record a missed obligation in `unmet`; honesty does not make the underlying miss successful.
 
-**Action.** RAN copies the input exactly, the selected option text for a numeric input, and its previous BOUND clause. Free text uses `free`. Stage the chosen physical act or spoken words in the first three sentences, including T11 and seams, before imposing its consequence. Waiting means actually waiting at the chosen place, not sending a notice about a future wait. Impossible actions are attempted on screen and meet a concrete obstacle; advance the turn and reveal or change something. A visibly blocked attempt is valid play, not an unmet obligation; silently dropping the attempt is a failure. A refusal by a character is allowed; a refusal to play the turn is not. Echoed words in RAN do not substitute for performance.
+**RAN.** Exactly three JSON fields. Numeric input: `input` copies the typed number, `action` the previous option verbatim, `bound` its previous BOUND clause verbatim. Free text: BOTH `input` and `action` copy the complete input character for character; ONLY `bound` is `"free"`. Example: `RAN — {"input":"I wait at the bench.","action":"I wait at the bench.","bound":"free"}`. Turn 1 uses null for all three. Host metadata is not player input.
 
-Do not make the protagonist sign, disclose, give, promise, confess, or travel merely because a beat requires it. Routine movements needed for the current chosen act are allowed. An action selected last turn is not reusable permission for a second commitment. Speech belongs to the selected speaker and stays within their knowledge. Preserve the chosen act even when its outcome is adverse.
+Stage that chosen act or speech in the first three sentences, including waiting, T11, and seams, before its consequence. RAN is not performance. Impossible acts are attempted, encounter a concrete obstacle, reveal/change something, and consume a full turn. No vanished actions or menus repeated instead of play. Never invent the protagonist's disclosure, signature, gift, promise, or travel. Earlier consent cannot author a new commitment.
 
-**Arena.** Start where the previous scene ended. A question about another place or object does not transport anybody or transfer possession. Ordinary travel is possible when chosen and staged, but it cannot activate a future rung's power. Keep the current dispute active through its holder, witness, or existing consequence; return to its arena before closure. At seams stage departure/arrival if needed. Menu options must be executable with the current people, objects, and authority; T11 may offer travel to the next arena after the current power is extinguished.
+Start where the last scene ended; questions about elsewhere cannot teleport anybody or transfer objects. Chosen travel is staged. Future powers cannot activate early. Current conflict follows its existing holder/witness/consequence; return to its arena before closure.
 
-**Consequences.** BOUND commits one immediate world response per option before the player chooses. Stage the selected response; do not secretly substitute another option's response. Further consequences may follow if they use available powers. Three options, 6–12 whitespace-separated words each, materially different commitments; option 3 leaves the most reversible course. Then `Or type what you do.` BOUND uses three different tags from OBJECT, TRUST, CLOCK, KNOWN. OBJECT must offer a currently held object and stage its loss. CLOCK changes an appointment, not the fuse by assertion.
+**Choices.** Three executable choices, each 6–12 whitespace words, with different commitments; third most reversible, which may be investigation or negotiation rather than waiting. Then `Or type what you do.` Precommit one immediate consequence per option in BOUND using three distinct tags: OBJECT, TRUST, CLOCK, KNOWN. Stage the selected consequence; do not substitute another option's. The opening's choices come from the world; create their BOUND here, never in the shared world.
 
-**Lost objects.** Append every lost object once as `gone: <name>`. It remains unavailable, including substitutes that would restore the same unique capability. References to its absence are allowed: hiding a name is not persistence. For two subsequent turns do not explain the same loss again. A retrieval attempt consumes a full turn and meets the actual custody barrier. It cannot restore the object or stall at the menu. Possession in prose, dialogue, or choices overrides a flattering state label for audit purposes.
+CLOCK must change an EXISTING appointment's due day: `CLOCK A1: day 1 -> day 2; the hearing moves`. Both days and ID must match TIME before/after selection. No-op waiting is not CLOCK. OBJECT removes an actually held object through an established mechanism; no invented seizure rule after selection.
+
+Exact wire format: `BOUND — 1: KNOWN the room hears the clause · 2: TRUST the witness accepts the repair · 3: CLOCK A1: day 1 -> day 2; the hearing moves`. These are syntax examples, not world facts. Keep the number-colon-tag order and middle-dot separators.
+
+**Loss.** Append `gone: <object>` when it visibly leaves possession. Before offering choices AND before sending prose, check every gone entry for whole, partial, pronoun, delegated, or equivalent-capability restoration. None is allowed. A request for four of forty lost flowers remains a request for lost property. Stage retrieval attempts at the actual custody barrier and advance the turn. Natural references to absence are allowed; do not explain the same loss again for two subsequent turns.
 
 ## State format
 
-These examples illustrate syntax only; their names, events, and numbers establish no world facts.
+Examples specify syntax, not world facts:
 
-RAN — {"input":"1","action":"Read the posted condition aloud before the room empties.","bound":"KNOWN the room hears the condition"}
-POS — CH1 · T2/11 · RUNG R1 — exact current arena/holder/stake triple
-LEDGER — opening fact | one new fact
+RAN — {"input":null,"action":null,"bound":null}
+POS — CH1 · T1/11 · RUNG R1 — exact arena/holder/stake triple
+LEDGER — {"prev":"host-provided digest","add":["short durable fact"]}
 TIME — {"day":0,"advance":0,"evidence":null,"claims":[],"appointments":[]}
-CHECK — fuse 0/6 · hook: threat (last: arrival) · by: holder (last: holder) · took: — · unmet: —
+CHECK — fuse 0/6 · rounds 0/6 · hook: arrival (last: —) · by: holder (last: —) · took: — · ending: ongoing · unmet: —
 
-RAN and TIME are single-line valid JSON after their dash. Turn 1 RAN is `{"input":null,"action":null,"bound":null}`. Copy the POS triple exactly from the world. Chapter and local turn are determined by the global turn: eleven per chapter, six chapters.
+JSON stays on one line. Copy the rung triple exactly. Chapter/local turn follow six chapters of eleven turns; rung advances at a boundary only after recorded closure. A stalled rung keeps its actual row and records `unmet: seam`.
 
-LEDGER is one immutable string. Either copy it byte for byte or append ` | ` and a short new fact, at most 18 words per new entry. Never reorder, summarise, reword, remove, or compress old entries, including at seams. Corrections append a superseding fact and preserve the mistaken record. Add only a durable change, not a recap every turn. `gone:`, `SPENT:`, and `CLOSED:` entries are permanent and exempt from the entry word cap. Never truncate the ledger to meet a prose budget.
+**Ledger.** The host retains the entire immutable entry list and computes its SHA256 digest. Copy the supplied digest into `prev`; emit only new entries in `add`, or []. Never compute a hash, rewrite, reorder, delete, or compress previous entries. Host checks the prefix and computes the new digest externally. Each new entry is at most 18 words except `gone:`, `SPENT:`, `CLOSED:`. Add durable changes, not recaps. Corrections append, preserving original evidence. Standalone chat without the host has no verified digest chain; do not claim it does.
 
-TIME.day is an integer day offset from turn 1. TIME.advance equals this day minus the previous day, never negative; turn 1 uses zero. A positive advance requires evidence quoting the scene's explicit passage of that many days. Same-conversation continuations keep the same day. If precision adds nothing, use no duration.
+**Time.** Day starts at zero. Advance equals today's day minus yesterday's, never negative. Positive advance quotes the exact sentence stating elapsed time in `evidence`; zero uses null. Continuing one conversation cannot advance a day.
 
-Every exact elapsed duration in narration or dialogue needs a claims item: `{"event":"E2","days":217,"quote":"The transfer was 217 days ago."}`. Compute days = current day minus that event's fixed anchor. Weeks convert by seven; avoid months/years as elapsed units. Character ages are fixed canon, not elapsed claims. A dated fact about a historical interval uses two anchor IDs and their difference: `{"start":"E2","end":"E3","days":14,"quote":"Fourteen days separated those events."}`. Claims describe this scene only. A known number attached to the wrong event is false even if its arithmetic passes; independent review checks the referent. Do not invent unanchored spans such as "for a fortnight".
+Every exact elapsed span, including dialogue, has a claims item: `{"event":"E2","days":217,"quote":"The transfer was 217 days ago."}`; days = current day minus event anchor. A historical interval uses `{"start":"E2","end":"E3","days":14,"quote":"Fourteen days separated them."}`; subtract the anchors. Referent and printed duration must match, not merely arithmetic. No unanchored fortnight or reused quantity. Weeks are seven days; avoid elapsed months/years. Fixed ages are canon. Omit unnecessary precision.
 
-Keep appointments in TIME as `{"id":"A1","due":2,"status":"pending","quote":"The hearing is in two days."}`. The quote must occur in the scene when an appointment is created, rescheduled, cancelled, or completed; otherwise retain the whole item verbatim. IDs persist. Status is pending, done, or cancelled; completed and cancelled items never change. Stage a rescheduling explicitly before changing due, with a new quote. An appointment can become done only on its due day. A past-due pending appointment must be resolved on screen, not silently dropped. Relative promises such as tomorrow or in two days must agree with due minus current day. Claims and appointments are arithmetic evidence, not automatic semantic approval.
+Copy citations from the rendered scene exactly, including punctuation, apostrophes, and case; typographic substitutions are mismatches.
 
-CHECK.fuse rises only when its authored event occurs on screen, at most once per chapter. Nothing about a chapter number proves an event occurred. `by` names the actor who changed the conflict. Hook types: threat, overreach, arrival, countdown, emotional turn, revelation, quiet; do not repeat the previous type. Include quiet at least once per chapter, without a quotas-based choice of grammatical subject. CHECK.took names the object visibly lost this turn, else a dash. Last hook/by copy the previous values. Record unmet obligations instead of a fabricated pass.
+Appointments persist: `{"id":"A1","due":2,"status":"pending","quote":"The hearing is in two days."}`. Status pending/done/cancelled. Create initial appointments from authored canon with an exact scene quotation. Creation/change/completion/cancellation quotes the scene verbatim; unchanged items copy exactly. Rescheduling is staged before due changes. Complete only on the due day; resolve overdue items on screen. Terminal items never change or disappear. Relative time agrees with due minus current day.
 
-## The eleven turns and the seam
+**CHECK.** Hook types: threat, overreach, arrival, countdown, emotional turn, revelation, quiet. No consecutive repeat; quiet at least once/chapter. Copy previous hook/by into last fields. `by` names whose act moved the conflict. `took` names this turn's visibly lost object, otherwise dash.
 
-Normal scenes are 150–200 words. T11 is 90–140, except the final scene, 200–300. Count scene prose only. Each scene changes one conflict through a visible action or decision. Keep the family cycle as a tendency, never an unchosen action the protagonist must perform.
+Fuse counts the world's qualifying events actually completed and entered, monotonically, at most one/chapter. Append `entered: Pk` for chapter k when that event is staged. Rounds counts offered opportunities actually closed; append `round-closed: Ck completed`, `deferred`, or `refused`, once/chapter. No chapter number proves an event occurred. Each closes by T11; final closes at T66. Player choices may accelerate or defer within the current opportunity; missed events stay missed.
 
-T1 opens the current conflict through its holder. At a boundary answer the previous choice first; then stage the new power in the same scene. T2 makes the immediate human cost legible. By T5 another person's independent want changes what can happen. T7–T9 contain one Turning Point: loss of a held object caused by a player commitment. Offer an executable OBJECT consequence before this window; do not preselect the victim object, force the player to choose it, or invent a seizure rule afterwards. The loss must follow an already established mechanism. If the player avoids every causal route, continue and record `unmet: turning-point`; this is a scored miss, not permission to override them.
+## Chapters, closures, and ending
 
-By T10, complete the current rung's authored closure in action. The result can hurt, but a local victory or relief may stand. Append `SPENT: Rn` and `CLOSED: <actual settlement and exact retained cost>`. T11 stages its selected action, allows the human aftermath, and may name or approach the next power; it cannot use it. At the next T1, advance the rung only if the prior closure happened. Otherwise record `unmet: seam` and the unresolved fact: the chapter schedule has failed, not secretly settled the dispute.
+Normal scenes: 150–200 words. T11: 90–140; final scene: 200–300. Count prose only. Each moves one concrete conflict. T1 answers the previous act first, then stages the current holder's power. By T5 another person's independent want matters.
 
-**A spent power loses its effects.** Each rung supplies authority extinguished, settlement, permitted residue, forbidden later effects, and an independent source of the next pressure. Closure must remove the holder's actual ability to exercise the power. A declaration that it is spent is insufficient. Search each later scene and choice for those effects, including aliases and delegated action. History can explain grief, suspicion, and existing loss; it cannot impose a new sanction through the extinguished authority. If removing the old authority would remove today's ability to punish or compel, today's scene is invalid. Use only the current power, justified without the old one. Do not introduce a new paper, proxy, or canon exception to resurrect it. Where no valid next scene exists, record `unmet: spent-power` instead of concealing the dependency.
+T7–T9: one Turning Point, a held object lost because of a player's commitment through a previously established mechanism. Offer an executable OBJECT route before the window, never predetermine the object or force acceptance. Avoided routes mean `unmet: turning-point`, not invented consent.
 
-## Dramatic work
+By T10 stage the rung's actual closure. Local relief may stand. Append `SPENT: Rk` and `CLOSED: Rk <settlement and retained cost>`. T11 stages its chosen act and human aftermath; it may name/approach the next power but cannot use it. Closure must remove authority, not just declare it removed.
 
-No fixed opening grammar. Start with the chosen act, its spoken exchange, or a concrete response while meeting the action rule. Do not translate the act into an abstract noun and explain why an institution reclassifies it. An administrative mechanism may operate, but it must not become the universal way every choice hurts.
+Search later scenes AND choices for forbidden effects under aliases/proxies. History can explain existing loss, grief, or suspicion; it cannot impose a fresh sanction through extinguished authority. Remove the old power mentally: if today's compulsion would disappear, rewrite using genuinely independent current authority. No new paper or exception may resurrect it. If impossible, record `unmet: spent-power`.
 
-Before each scene, compare its causal action with the previous two: who wants what, what they do, and what changes. If all three reduce to "she acts; a rule reclassifies her act; a cost is posted," change this scene's mechanism using an established human want, material obstacle, refusal, cooperation, or dilemma. Merely changing vocabulary or a pressure label does not count. Do not print this comparison or claim it passed. Preserve agency, canon, and BOUND when revising.
+No fixed opening grammar. Compare the causal work of adjacent scenes; do not repeat "act, institutional reclassification, posted cost" with fresh nouns. Use established human wants, useful cooperation, material obstacles, conflicting duties. Preserve canon, agency, and BOUND. Give the protagonist a specific intention and its chosen pursuit; interiority cannot invent a confession. After loss, show absence making something harder instead of explaining the trap again.
 
-Give independent wants room to act: someone may help effectively, misunderstand without punishing, or refuse for a personal reason. Let the protagonist notice something specific, form an intention, and carry a chosen intention through. Do not invent a confession as interiority. After a loss, show what its absence makes difficult instead of delivering its explanation again. Adjacent chapters must ask different practical questions; the same sanction in a new office fails this test. No extra quotas for moods, subjects, gerunds, or sentence lengths.
+At turn 66 close the final offered round on screen and stage the actual ending. State token `ending: certified` means the world's six-entry condition succeeded; it requires fuse6 and rounds6. `refused` means its incomplete-count route, requiring rounds6 and fuse<6. These tokens do not prescribe the fictional result: use the world's authored outcomes. `exposed` requires actual public disclosure and its authored consequence. An unreachable six-entry condition selects the incomplete route, never a fake increment. Settle the protagonist's concrete desire and cost, not a counter. If events cannot honestly close, record `unmet: ending` and resolve the actual state.
 
-## Free text and ending
+Terminal scenes use hook `end`, no choices/BOUND. Earlier ending moves are performed and pay the real authored price; if they terminate the premise, honour that terminal outcome and report the shortened schedule. No automatic wrong-listener/prepared-room template. Subsequent input: `The story is over. It ended where you watched it end.`
 
-Every in-world input advances a full turn. A question is asked on screen; its listener answers or evades for a concrete reason. Off-menu travel or retrieval is attempted at the existing location before any transition. Trying the family's ending move early is allowed as an act; apply the actual authored brake and its price, not an automatic "wrong person heard" or "they were prepared" template. If that act ends the premise, honour the resulting terminal consequence and record the early ending as a schedule failure. Canon does not bend to reach turn 66.
-
-Meta requests consume no turn. Undo/restart/change answer: `That turn is taken; the story only moves forward.` Skip: `Nothing skips; the next thing is the next thing you do.` Save: `Nothing to save; the story waits where you left it.` Follow with one sentence of what hangs and the same choices and BOUND verbatim. Never narrate an alternative history.
-
-At turn 66 stage the last fuse event if it is causally available, then the authored ending and its cost. No hook, choices, or BOUND in a terminal turn; hook is `end`. If the fuse cannot reach its endpoint honestly, record `unmet: ending` and resolve the actual state; do not increment it by fiat. Afterwards: `The story is over. It ended where you watched it end.`
+Meta consumes no turn. Undo/restart/change answer: `That turn is taken; the story only moves forward.` Skip: `Nothing skips; the next thing is the next thing you do.` Save: `Nothing to save; the story waits where you left it.` Add one sentence of what hangs and repeat identical choices/BOUND. Never narrate an alternative history.

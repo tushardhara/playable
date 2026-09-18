@@ -18,17 +18,17 @@ Write three secrets, each with a holder and a plausible discoverer. Demonstrate 
 
 ## Six rungs and five closures
 
-Six chapters of eleven turns. Each row starts exactly:
+Six chapters of eleven turns. Each row starts exactly as the next line, including the literal leading hyphen and space (do not replace it with a heading or bare R1):
 - R1 — arena/holder/stake · power sentence
 
 Use R1 through R6. The holder is never the protagonist. The power sentence states who can do what through which authority; it need not use a bureaucratic classification. Adjacent rungs must require different responses from the player, not just name different places.
 
-Under EACH row add:
-- Mechanism: a concrete action the holder can take, the practical question at stake, and how this differs causally from the previous rung.
-- Closure: an achievable event by T10 extinguishing this authority, whoever wins. It cannot require an unchosen protagonist signature, admission, or transfer.
-- Residue: the exact existing loss or social consequence permitted to persist.
-- Forbidden effects: new denials, claims, sanctions, or demands that become impossible afterwards, including proxies and renamed mechanisms.
-- Next source: the independent authority of the next rung, or final settlement for R6.
+Under EACH row add the following five lines. Each starts with exactly two spaces, then its label; these are indented continuation lines, not new hyphen bullets:
+  Mechanism: a concrete action the holder can take, the practical question at stake, and how this differs causally from the previous rung.
+  Closure: an achievable event by T10 extinguishing this authority, whoever wins. It cannot require an unchosen protagonist signature, admission, or transfer.
+  Residue: the exact existing loss or social consequence permitted to persist.
+  Forbidden effects: new denials, claims, sanctions, or demands that become impossible afterwards, including proxies and renamed mechanisms.
+  Next source: the independent authority of the next rung, or final settlement for R6.
 
 Test the ladder by mentally removing each earlier power. Can every later power still operate from its own source? If not, rebuild the ladder. An heirloom already lost can remain lost; its confiscation cannot justify a fresh claim to unrelated tools. An attendance dispute cannot quietly become permanent ownership of the protagonist's labour. Global canon must not grant back a power a closure promises to end.
 
@@ -36,7 +36,7 @@ Avoid making all six mechanisms an action reclassified by paperwork. At least on
 
 ## Time and opening
 
-Include a section headed "Time anchors" containing all historical events that can receive an elapsed duration:
+Include a section headed "Time anchors" containing all historical events that can receive an elapsed duration. Preserve each line's literal leading hyphen and space:
 - E1 = -217 | the transfer
 - E2 = -42 | the death
 
@@ -48,7 +48,7 @@ The opening stays wholly in R1's arena. Put its authority in action and its adva
 
 The World Card contains title/logline, premise, brake and fuse, register/family, cast, secrets, anchors, all ladder contracts, and an opening. Preserve those facts and ladder triples verbatim when emitting FILE 2; do not quietly shorten a stake or change an arena. End the card with the override list and "Anything else emits FILE 2". Report derivation checks as calculations and concrete examples, never PASS or a self-awarded verdict.
 
-World section: 900–1,100 whitespace-separated words, including headings, ladder contracts, and opening choices. Runtime: copy the template below verbatim. Total FILE 2: maximum 3,500 words; aim near 2,400 with the smaller runtime. Publish actual prose/choice metering at this size before claiming it works. If the budget cannot fit, shorten world exposition, never silently drop a runtime rule or closure. These are experimental budgets, not a proven cognitive limit.
+World section: 900–1,100 whitespace-separated words, including headings, ladder contracts, and opening choices. Draft the card's emit-ready world near 1,000 words, leaving room below the cap; derivation calculations and override instructions outside that world need not be emitted. Preserve every world fact when emitting; do not discover a budget problem only after promising an overlong card. Runtime: copy the template below verbatim. Total FILE 2: maximum 3,500 words; aim near 2,400 with the smaller runtime. Publish actual prose/choice metering at this size before claiming it works. If the budget cannot fit, shorten world exposition, never silently drop a runtime rule or closure. These are experimental budgets, not a proven cognitive limit.
 
 Emission is one message:
 ===== BEGIN FILE 2 - COPY EVERYTHING BELOW THIS LINE =====

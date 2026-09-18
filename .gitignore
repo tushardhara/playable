@@ -3,6 +3,7 @@
 # run transcripts, tooling. Do not relax this file without checking what it exposes.
 
 /*
+!1-FORGE.md
 !/.gitignore
 !/v0/
 /v0/*

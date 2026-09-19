@@ -1,12 +1,12 @@
 # Forge — How It Works
 
-*Plain-English explainer for `1-FORGE.md` revision 8. Nothing here is a rule; the spec is the
-authority. Last updated 19 September 2026.*
+*Plain-English explainer for `1-FORGE.md`, revision 8, which is the revision sitting beside this file.
+Nothing here is a rule; the spec is the authority, and where the two disagree the spec wins.*
 
-**Where things stand today.** Revision 8 exists, is committed on branch `forge-rev8`, and is open as
-PR #2. `main` still holds revision 7. Four cold reviews and one play have found 74 defects between them; 70 are repaired — the fourth
-read was of revision 8's own repairs, and fifteen of them needed repairing. **Nobody has played revision 8, not once.** Everything below describes what
-the file says, not what has been observed.
+**Where things stand.** Four cold reviews and one play have found 74 defects between them and 70 are
+repaired; the fourth review read revision 8's own repairs and found fifteen of those wanting.
+**Nobody has played revision 8, not once.** Everything below describes what the file says, not what
+anyone has watched happen.
 
 ---
 
@@ -93,8 +93,9 @@ option here.
 
 # 4. PROFILE: your answers, written down
 
-Your eleven answers become **PROFILE**, a short list printed at the top of FILE 2 — at most 120
-words, one `key: value` per line. Most of it shaped what Forge authored and is there for the reader.
+Your eleven answers become **PROFILE**, a short `key: value` list of at most 100 words. It sits
+between the world and the runtime in FILE 2 — the file opens with the story's own title, never with
+settings — so the rules are read after the values that parameterize them. Most of it shaped what Forge authored and is there for the reader.
 
 **Six values do real work at play time.** They are substituted into the runtime as it is emitted:
 
@@ -114,8 +115,11 @@ should not be forced to stage relief it has not earned.
 
 Any of the six can be overridden after the World Card: `edit P.choice_words 5–9`.
 
-A setting is a **number, never a rule**. Emptying one changes its own value and nothing else — it is
-never permission to delete the sentence around it.
+Five of the six are **values, never rules**: they sit inside a sentence that survives them, so
+substituting one changes its own number and nothing else, and no setting is permission to delete the
+words around it. `clue_rule` is the exception, because its value is a whole sentence: it stands on a
+line of its own, and at any Q8 answer but *strictly* it is replaced by nothing, which removes that
+line and only that line.
 
 ---
 
@@ -181,13 +185,17 @@ That advantage would solve the story by episode three — which is what the brak
 
 The **brake** answers: if these two love each other, why can't they simply talk and fix everything?
 
-Here it is **career ambition**. Honesty carries a real price:
+Career ambition is the *pressure* in this story, not the brake — a motive is not a brake, because
+nothing physical changes when it bites. The brake is derived from a noun already in the world: **the
+credit line on the launch document.** Every time Aarav uses what he knows about Meera to steer an
+outcome, his name comes off one more deliverable on that page.
 
-* Aarav backs Meera publicly for the launch → he loses professional credit.
-* Meera stays in Bangalore for Aarav → she loses Singapore.
-* Aarav asks her not to go → he becomes the man who asked his partner to give up her ambition.
+* He uses her own words to move her off the Singapore call → his name leaves the client deck.
+* He reads the room and lets her take the launch → the credit line names her, not him.
+* He steers Sunita by what only he knows Meera fears → the reference letter loses his signature.
 
-The brake must be **concrete** — a cost that can appear on screen — never "he felt scared."
+Each is **concrete, on the page, and caused by using the advantage** — which is what makes it a brake
+rather than a mood. Never "he felt scared."
 
 **Q9 decides when it lands, never what it is:**
 
@@ -210,13 +218,15 @@ boundary and accepts a meaningful consequence.
 
 > "I want you to take Singapore. But I also need you to know I love you."
 
-It counts only if saying it actually cost something.
+It counts only if saying it actually cost something — and **at most one lands per chapter**. Six
+chapters, six events, no banking them for later: a chapter that misses its fuse event has spent it,
+and the complete-success ending is gone for good. That is the tightest thing in the design.
 
 **Rounds** count something different: how many chances the story has *offered*. So:
 
-**Rounds: 5 / 6 · Fuse: 3 / 6**
+`fuse 3/6 · rounds 5/6`
 
-means five chances have come and gone, and the hero converted three. The difference between
+— five chances have come and gone, and the hero converted three. The difference between
 *offered* and *earned* is the point.
 
 Both print in the state line **every single turn** — this is not an invisible meter, and an earlier
@@ -278,45 +288,50 @@ Six chapters, six **rungs**, each a different source of conflict:
 ↓
 **R3 — Career.** Meera gets the Singapore offer.
 ↓
-**R4 — Jealousy.** Kabir needs to know whether Meera actually wants to continue.
+**R4 — The sanctioned suitor.** Kabir, standing on the invitation Meera's family gave him, can demand
+a public answer at the engagement lunch — or withdraw in front of both families.
 ↓
 **R5 — Conflicting duties.** Aarav has fixed family obligations at exactly the wrong moment.
 ↓
-**R6 — The decision.** Whether these two can build a real life together.
+**R6 — The deadline.** Ms. Rao in Singapore holds the transfer offer open until a date she sets. The
+decision is Aarav and Meera's; the authority that forces it is hers, and it closes when the offer is
+signed or lapses.
 
 Adjacent rungs must demand *different responses*, not just different places. At least one dispute has
 to turn on a material constraint, one on a voluntary relationship, and one on conflicting duties —
-so the six do not become one problem in six costumes.
+so the six do not become one problem in six costumes. And every rung needs a **holder** who is not
+the protagonist: a person with an authority that can actually be extinguished. "Whether these two
+can be together" is not a rung, because there is nobody to strip the power from.
 
-Every rung carries six lines:
+The holder lives in the rung's own row, with the arena and the stake, and that row's shape is fixed:
 
-**Holder** — who currently has the power. Never the protagonist.
-
-> R1 holder: Dev, because he decides who leads the launch.
+> - R1 — the launch / Dev / who owns the client account · Dev alone picks the launch lead.
 
 Dev is not evil. He may simply want the lowest-risk person on an important client launch. That is how
 cartoon villains are avoided.
 
-**Mechanism** — what the holder can actually do. Dev picks a launch lead; Sunita can call a formal
+Under the row go **six lines**:
+
+**1. Mechanism** — what the holder can actually do. Dev picks a launch lead; Sunita can call a formal
 family meeting; Meera can accept Singapore; Kabir can decide whether to keep courting her. Different
 *kinds* of power, not the same power renamed.
 
-**Closure** — this authority genuinely ending, by turn 10 of the chapter. Once the company locks the
+**2. Closure** — this authority genuinely ending, by turn 10 of the chapter. Once the company locks the
 launch lead, Dev cannot threaten to reopen it every five episodes. Declaring it closed is not
 closing it.
 
-**Residue** — the conflict ended, the consequences stay. Aarav may permanently lose credit for the
+**3. Residue** — the conflict ended, the consequences stay. Aarav may permanently lose credit for the
 launch, and that disappointment goes on colouring later scenes.
 
-**Forbidden effects** — what can never happen again. Dev cannot discover a secret policy that lets
+**4. Forbidden effects** — what can never happen again. Dev cannot discover a secret policy that lets
 him remove Meera after all. Closed power cannot return through proxies, renamed rules or convenient
 exceptions.
 
-**Next source** — where the following conflict comes from, independently. Dev's authority ends, but
+**5. Next source** — where the following conflict comes from, independently. Dev's authority ends, but
 Sunita's exists whether or not Dev is ever mentioned again. The story never depends on one villain
 manufacturing trouble.
 
-**Objects and scene** — new in revision 8. The removable things this rung puts at risk, each named
+**6. Objects and scene** — new in revision 8. The removable things this rung puts at risk, each named
 and held by someone: three at minimum, four or five in a story that flips often. Plus, if you chose
 "several people," the non-protagonist whose scene may open this chapter and what it shows. Before
 this line existed, the runtime could be required to take an object the world had never created.
@@ -332,9 +347,11 @@ Anyone not named there does not know, and the runtime enforces that from turn on
 
 **Time anchors** are historical events, in integer days, with turn 1 as day 0:
 
-> E1 = -210 | Aarav and Meera first met
-> E2 = -70 | the launch crisis
-> E3 = -21 | Aarav turned down Gurgaon
+> - E1 = -210 | Aarav and Meera first met
+> - E2 = -70 | the launch crisis
+> - E3 = -21 | Aarav turned down Gurgaon
+
+The leading `- ` is part of the format and is copied through to FILE 2 exactly.
 
 This is what stops "we met six months ago" in episode 5 becoming "three years" in episode 28. Exact
 days or whole weeks; **months and years are not allowed as elapsed spans**, and one gap keeps one
@@ -395,14 +412,17 @@ One message per turn. Five state lines, the scene, three choices, BOUND, any CAR
 
 **RAN** — what you chose last turn, copied exactly, so the engine cannot loosely reinterpret it.
 
-**POS** — where we are: `CH1 · T4/11 · RUNG R1`.
+**POS** — where we are, with the rung's triple spelled out every turn:
+`CH1 · T4/11 · RUNG R1 — the launch / Dev / who owns the client account`.
 
 **LEDGER** — permanent memory. Append-only: new facts are added, never rewritten, reordered or
 compressed. Twenty-five episodes later the story still knows Aarav backed Meera publicly.
 
 **TIME** — the day, and the arithmetic behind any elapsed span.
 
-**CHECK** — the counters: `fuse 3/6 · rounds 5/6 · hook: revelation · by: Sunita · took: — ·
+**CHECK** — the counters, and the `(last: …)` fields are not optional; they carry the previous turn's
+hook and mover so the engine cannot repeat itself:
+`fuse 3/6 · rounds 5/6 · hook: revelation (last: threat) · by: Sunita (last: Dev) · took: — ·
 open: W2 CH2T7 · ending: ongoing · unmet: —`.
 
 Then the scene, in the register you chose, moving one concrete conflict.
@@ -435,7 +455,9 @@ A supporter moving on their want · a promise falling due · a pleasure landing 
 a fuse event · a quiet beat.
 
 Anything that fails on causality, knowledge, time, resources or authority is dropped. Of what
-survives, the story stages whatever has waited longest. Nothing is scheduled; nothing is forgotten —
+survives, the story stages the one **whose absence has cost the most** — longest waiting breaks a
+tie, it does not win the argument, so a promise falling due outranks a quiet beat that has simply
+been parked since chapter one. Nothing is scheduled; nothing is forgotten —
 an unstaged candidate keeps waiting and grows more urgent. The failure record, `unmet:`, now logs
 only what became *impossible*, never what simply was not chosen.
 
@@ -451,9 +473,12 @@ chapter's shape, then style.
 
 Before you pick, the engine states one immediate consequence attached to each option.
 
-> **1** Challenge Dev publicly · **KNOWN** the room hears it
-> **2** Support Meera · **TRUST** she sees what he gave up
-> **3** Ask for a private review · **CLOCK** the rehearsal moves to day 3
+> Challenge Dev publicly · Support Meera · Ask for a private review
+>
+> `BOUND — 1: KNOWN the room hears the claim · 2: TRUST Meera sees what he gave up · 3: CLOCK A1: day 2 -> day 3; the rehearsal moves`
+
+The wire format is exact: number, colon, tag, then the consequence, separated by middle dots. A CLOCK
+entry names the appointment and both days, and they have to match TIME before and after.
 
 Pick 2, and the engine must deliver 2's consequence. It cannot swap in the more dramatic one from
 option 1.
@@ -504,8 +529,11 @@ by an event manufactured to close it, and a settled id never reopens.
 **`unmet:`** — honest failure. `unmet: turning-point` means the structural beat did not legitimately
 happen, which is better than inventing an event the player never caused.
 
-**CARRY** — at the end of every chapter, the engine reprints all live state word for word: position,
-day, open appointments, counters, every lost object, everything anyone knows, every unsettled promise.
+**CARRY** — at the end of every chapter, the engine reprints all live state word for word: the POS
+triple, the day and unfinished appointments, the counters, the last hook, the last mover, the ending
+token, and every `gone:`, `knows:`, unsettled `owed:`, `paid:`, `SPENT:` and `CLOSED:` entry. If it
+cannot copy something the previous block listed, it writes `CARRY INCOMPLETE` and names it rather
+than quietly dropping it.
 It sits inside the turn now, before the stop, so it cannot be orphaned on a final turn that has no
 BOUND.
 
@@ -610,17 +638,20 @@ Being honest about this is cheaper than being surprised later.
 
 **Evidence**
 
-* **Zero plays of revision 8.** One screenshot of one turn, from a revision nobody has identified, is
-  the entire play record.
+* **Zero plays of revision 8.** The play record is one screenshot of a single turn from an
+  unidentified revision — enough to expose four faults, not enough to tell anyone how long the story
+  held. The 33-turn run people cite is older and was a different, pre-Forge build.
 * Two plays of the same premise with different answers, to see whether the two stories actually feel
   different. If they feel the same, the settings are not doing anything.
-* One full 66-turn run. Nobody has been past 33.
+* One full 66-turn run. The longest run on record anywhere in the project is 33 turns, on an earlier
+  build.
 
 **Known unknowns, waiting on a play rather than an edit**
 
 * Whether a bleak tone should weaken the pleasure candidate.
 * Whether `by` — whose act moved the conflict — can be gamed by relabelling.
-* Whether five ledger prefixes make the state block visibly bigger than the story.
+* Whether six ledger prefixes — `gone:`, `knows:`, `owed:`, `paid:`, `SPENT:`, `CLOSED:` — make the
+  state block visibly bigger than the story.
 
 **Bigger decisions, deliberately not taken**
 

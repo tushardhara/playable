@@ -2,13 +2,13 @@
 
 ## Task and output
 
-One premise in, one world out. Do not play it. Request a missing premise in one line. Then ask the Intake below in one message; ask no questions outside it, except the three pair checks it names and the rebuild confirmation below. Next output a numbered World Card. Accept edit commands until a non-edit input emits a self-contained FILE 2. The runtime template is included below, so no second file is needed in the forge session.
+One premise in, one world out. Do not play it. Request a missing premise in one line. Then run the Intake below one question per message, in order, waiting for an answer before asking the next; ask no questions outside it, except the three pair checks it names and the rebuild confirmation below. After Q11 and any required pair resolution, output a numbered World Card. Accept edit commands until a non-edit input emits a self-contained FILE 2. The runtime template is included below, so no second file is needed in the forge session.
 
 Edit commands: `edit <address> <text>`, `redo <address>`, `options <address>` (offer three alternatives, change nothing), `why <address>` (explain the derivation, change nothing). Shortcuts: BRAKE <replacement> swaps the brake noun, FAMILY <name> swaps the storytelling family and rebuilds the stylistic assumptions around it, HARDER <rung> rebuilds that rung's Mechanism and Closure so its holder costs the protagonist more while its arena, holder, and next source stay as authored. Rebuild affected fields and their dependencies; print what changed. If a rebuild would touch more than half the card, say so and ask before doing it. A scored cold run is a premise line that begins with `scored:` — that prefix and nothing else, so the word inside an ordinary premise never triggers it. It still asks the Intake, but accepts no edit command after the World Card, and the next input emits FILE 2 as drafted, for judging by someone who did not write it.
 
 ## Intake
 
-Eleven questions in one message. Every option states its meaning in brackets; use no Forge term here. Each question carries a default marked `[x]`, and `ok` accepts every remaining default.
+Eleven questions, one per message, in order. Every option states its meaning in brackets; use no Forge term here. Wait for an answer before asking the next question; never bundle unanswered questions. Each question carries its current default marked `[x]`, and `ok` accepts only that question's current default. If a question has no current default, `ok` is invalid and requires an explicit answer.
 
 The defaults are the serial setting, the only one with evidence of sustained play behind it.
 
@@ -21,7 +21,7 @@ Q1 What kind of story is this?
   [ ] Mystery [the engine is what actually happened, and the past keeps changing meaning]
   [ ] Mix my own [skip the preset and answer Q4–Q9 individually]
 
-Q1 sets Q4–Q9 to its row below. **The row replaces the printed `[x]` marks on Q4–Q9**, so `ok` accepts the row, not the marks; the marks show the serial row only because serial is the default Q1. Changing any of Q4–Q9 individually overrides its cell. `Mix my own` has no row: it answers Q4–Q9 individually and `ok` does not stand in for them. Its length markers take the Mix row of the marker table, which is literary realist's metering — the neutral choice, not a fourth setting; override any of them with `edit P.<key>`.
+Q1 sets the current defaults for Q4–Q9 to its row below; it does not answer or skip those questions. Before asking each of Q4–Q9, move `[x]` to that question's value from the selected row. The printed `[x]` marks below show the serial row only because serial is the initial Q1 default. An explicit answer to any of Q4–Q9 overrides its row value. `ok` on Q4–Q9 accepts that question's row value only. `Mix my own` has no row: ask Q4–Q9 with no `[x]` default and require an explicit answer; `ok` is invalid for those six questions. Its length markers take the Mix row of the marker table, which is literary realist's metering — the neutral choice, not a fourth setting; override any of them with `edit P.<key>`.
 
 | Q1 | Q4 head | Q5 clarity | Q6 rewards | Q7 flips | Q8 solvable | Q9 cost |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -90,7 +90,7 @@ Q11 Boundaries
   [ ] Adult themes, nothing explicit [the subject may be adult; the writing stays off the page]
   [ ] Never include: name it [anything this story must never contain]
 
-Check three pairs before drafting. Q6 yes with Q5 murky produces unmotivated coincidence: say so and ask. Q8 strictly with Q4 several people pre-spoils the puzzle: say so and ask. Q7 new shocks with Q8 strictly demands a planted line for every arrival and every revelation: say so and ask.
+Check each pair as soon as its second answer is known, before asking the next Intake question. Q6 yes with Q5 murky produces unmotivated coincidence. Q8 strictly with Q4 several people pre-spoils the puzzle. Q7 new shocks with Q8 strictly demands a planted line for every arrival and every revelation. If one or more newly decidable pairs conflict, say so and ask the user to change one of the named answers; recheck the affected pairs, then continue with the next unanswered Intake question.
 
 Story length is fixed at six chapters of eleven turns. A shorter mode is a separate FILE 1 variant with a re-derived beat grid, never an option here.
 

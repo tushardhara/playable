@@ -4,8 +4,8 @@
 authority. Last updated 19 September 2026.*
 
 **Where things stand today.** Revision 8 exists, is committed on branch `forge-rev8`, and is open as
-PR #2. `main` still holds revision 7. Three cold reviews and one play have found 59 defects between
-them; 55 are repaired. **Nobody has played revision 8, not once.** Everything below describes what
+PR #2. `main` still holds revision 7. Four cold reviews and one play have found 74 defects between them; 70 are repaired — the fourth
+read was of revision 8's own repairs, and fifteen of them needed repairing. **Nobody has played revision 8, not once.** Everything below describes what
 the file says, not what has been observed.
 
 ---
@@ -361,17 +361,31 @@ Two terms in that list are easy to misread:
   stated once.
 * **Family** — the storytelling family, as in §5. Not relatives.
 
-The budget, and it is tight:
+The budget, and the important part is what kind of budget it is:
 
-| Part | Size |
+| Part | Aim |
 |---|---|
-| The world | 950–1,150 words |
-| PROFILE | 120 words maximum |
-| The runtime, copied verbatim into every story | 2,196 words |
-| **FILE 2 total** | **3,500 words maximum — 3,466 at worst case** |
+| The world | 950–1,200 words |
+| PROFILE | 100 words |
+| The runtime, copied verbatim into every story | ~2,250 words |
+| **FILE 2 total** | **aim 3,500 · hard stop 3,850 · 3,547 at worst case** |
 
-Thirty-four words of headroom. That is the live constraint on the whole project: nothing new can go
-into the runtime until something comes out.
+**These are aims, not gates.** A scene, a chapter or a world running ten per cent long is not a
+defect — in prose it is not even noticeable, and the handoff retired fixed scene length outright in
+favour of purpose-sized units of 25 to 220 words. The runtime never pads a scene to reach a floor,
+never cuts a beat that has already landed, and never counts its own words.
+
+Only the total has a hard edge, and for a mechanical reason: FILE 2 is pasted into a chat once and
+has to leave a 66-turn transcript room to grow. A hundred words either way changes nothing there; a
+thousand does.
+
+**Turn counts are the opposite.** Eleven turns a chapter and sixty-six a story are exact, because
+closure, the fuse and the rounds are all counted in turns.
+
+One lesson from four reviews is written into the spec itself: over-fitting these numbers is worse
+than missing them. A scene trimmed to land inside a band, a block cut so a table adds up, a rule
+compressed to buy margin — each spends something a reader would have noticed on an arithmetic
+nobody reads. When a count and the story disagree, the count moves.
 
 ---
 
@@ -589,10 +603,10 @@ Being honest about this is cheaper than being surprised later.
 
 **Blocking**
 
-* **The instruction book is fat.** FILE 1 is 7,262 words, up from 3,133. Most of the growth is
+* **The instruction book is fat.** FILE 1 is about 7,800 words, up from 3,133. Most of the growth is
   explanation of *why*, written into the file that tells the machine *what*. That exact mistake is
-  the one the archive blames for every earlier failure. The cut is the next job.
-* **34 words of headroom** in FILE 2. Nothing new fits until the cut happens.
+  the one the archive blames for every earlier failure. The cut is the next job — and it is a real
+  constraint, unlike the word budgets, because nobody has to read FILE 2 but the machine.
 
 **Evidence**
 
